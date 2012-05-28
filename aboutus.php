@@ -9,10 +9,25 @@ include_once("./app_code/AboutUs.php");
 
 $aboutUs = new AboutUs();
 
-echo "\r\n<div class='container'>\r\n   <h1>{$aboutUs->Header}</h1>";
+echo "\r\n<div class='container'>";
+echo "\r\n   <div class='row'>";
+echo "\r\n       <div class='two columns'></div>";
+echo "\r\n       <div class='eight columns'>";
+echo "\r\n            <h3>{$aboutUs->Header}</h3>";
+echo "\r\n       </div>";
+echo "\r\n       <div class='two columns'></div>";
+echo "\r\n   </div>";
 
-    foreach ($aboutUs->Paragraphs as $paragraph) {
-        echo "\r\n    <div class='row-fluid'>\r\n      <div class='span5'><div class='well'></br><p>{$paragraph}</p></div> </div>\r\n   </div>";
+
+foreach ($aboutUs->Paragraphs as $paragraph) {
+        echo "\r\n    <div class='row'>";
+        echo "\r\n         <div class='two columns'></div>";
+        echo "\r\n         <div class='eight columns'>";
+        echo "\r\n                    </br><p>{$paragraph}</p>";
+        echo "\r\n         </div>";
+        echo "\r\n         <div class='two columns'></div>";
+        echo "\r\n    </div>";
+        echo "\r\n";
     }
 
     echo "\r\n</div>\r\n";

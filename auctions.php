@@ -9,27 +9,40 @@ $folderBrowser = new FolderBrowser();
 
 $folders = $folderBrowser->GetFolders("./Auctions");
 
-echo "<div class='container'>";
-    echo "<h1>Active Auctions</h1>";
-    echo "</div>";
+echo "\r\n<div class='container'>";
+echo "\r\n   <div class='row'>";
+echo "\r\n     <div class='eight columns'>";
+if(count($folders) > 2)
+    echo "\r\n        <h2>Active Auctions</h2>";
+else
+    echo "\r\n        <h2>No Active Auctions</h2>";
+echo "\r\n     </div>   ";
+echo "\r\n   </div>";
 
 $auctionCount = 1;
 foreach($folders as $folder)
 {
-$auctionId = $folderBrowser->GetLeafFolder($folder);
-echo "<div class=\"row-fluid\">";
+    $auctionId = $folderBrowser->GetLeafFolder($folder);
 
-            echo "  <div class='span4 well'>";
-    echo "      <h1>" . strtoupper( $auctionId ) . "</h1>";
-    echo "      <p>This is a simple explanation of this auction. There could be longer descriptions in relation to this description. This is just a short example of what is possible.</p>";
-    echo "      <p><strong>Scheduled for:</strong> 20 June 2012 7:00PM</p>";
-    echo "      <a class=\"btn btn-primary btn-large\" href=\"auctiondetails.php?auction={$auctionId}\">View Details for {$auctionId}</a>";
-    echo "  </div>";
-            echo "</div>";
-            echo "<div class='row-fluid'><div class='span5'>.</div></div>";
-            echo "<div class='row-fluid'><div class='span5'>.</div></div>";
-            $auctionCount++;
-        }
+    if(strtoupper($auctionId) === "ZIPPED" || strtoupper($auctionId) === "UNZIPPED")
+        continue;
+
+    echo "\r\n   <div class='row'>";
+    echo "\r\n      <div class='four columns'>";
+    echo "\r\n         <div class='panel'>";
+    echo "\r\n            <h3>" . strtoupper( $auctionId ) . "</h3>";
+    echo "\r\n            <p>This is a simple explanation of this auction. There could be longer descriptions in relation to this description. This is just a short example of what is possible.</p>";
+    echo "\r\n            <p><strong>Scheduled for:</strong> 20 June 2012 7:00PM</p>";
+    echo "\r\n            <a class='medium button' href='auctiondetails.php?auction={$auctionId}\'>View Details for {$auctionId}</a>";
+    echo "\r\n          </div>";
+    echo "\r\n      </div>";
+    echo "\r\n      <div class='eight columns'></div>";
+    echo "\r\n    </div>";
+
+    $auctionCount++;
+}
+
+echo "\r\n</div>";
 
 include_once("footer.php");
 ?>
