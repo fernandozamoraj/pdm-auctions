@@ -2,12 +2,13 @@
 
 include_once("SafeWebReader.php");
 //html purifier code
-if(file_exists($_SERVER['DOCUMENT_ROOT'] . 'PDMAuctions/app_code/htmlpurifier/library/HTMLPurifier.auto.php'))
-    require_once $_SERVER['DOCUMENT_ROOT'] . 'PDMAuctions/app_code/htmlpurifier/library/HTMLPurifier.auto.php';
+if(file_exists($_SERVER['DOCUMENT_ROOT'] . '/app_code/htmlpurifier/library/HTMLPurifier.auto.php'))
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/app_code/htmlpurifier/library/HTMLPurifier.auto.php';
 else if(file_exists($_SERVER['DOCUMENT_ROOT'] . 'app_code/htmlpurifier/library/HTMLPurifier.auto.php'))
     require_once $_SERVER['DOCUMENT_ROOT'] . 'app_code/htmlpurifier/library/HTMLPurifier.auto.php';
-else
-    require_once $_SERVER['DOCUMENT_ROOT'] . '/app_code/htmlpurifier/library/HTMLPurifier.auto.php';
+else if(file_exists($_SERVER['DOCUMENT_ROOT'] . 'PDMAuctions/app_code/htmlpurifier/library/HTMLPurifier.auto.php'))
+    require_once $_SERVER['DOCUMENT_ROOT'] . 'PDMAuctions/app_code/htmlpurifier/library/HTMLPurifier.auto.php';
+
 
 
 class Services{
