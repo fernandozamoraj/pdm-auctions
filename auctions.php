@@ -33,7 +33,7 @@ foreach($folders as $folder)
     echo "\r\n            <h3>" . strtoupper( $auctionId ) . "</h3>";
     echo "\r\n            <p>This is a simple explanation of this auction. There could be longer descriptions in relation to this description. This is just a short example of what is possible.</p>";
     echo "\r\n            <p><strong>Scheduled for:</strong> 20 June 2012 7:00PM</p>";
-    echo "\r\n            <a class='medium button' href='auctiondetails.php?auction={$auctionId}\'>View Details for {$auctionId}</a>";
+    echo "\r\n            <a class='medium button' href='auctiondetails.php?auction={$auctionId}'>View Details for {$auctionId}</a>";
     echo "\r\n          </div>";
     echo "\r\n      </div>";
     echo "\r\n      <div class='eight columns'></div>";

@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>PDM Auctions Administration Page</title>
-    <link type="text/css" rel="stylesheet" href="../twitterbs/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="../twitterbs/css/bootstrap-responsive.css"/>
-</head>
-<body>
 <?php
 
     include_once ("../app_code/authentication.php");
@@ -32,7 +24,7 @@
 
        $filesList = $folderBrowser->GetImageFiles("../Auctions/" . $auction );
 
-       echo "<div class='container-fluid'>";
+       echo "<div class='container'>";
 
        foreach($filesList as $tempfile)
        {
@@ -41,12 +33,12 @@
 
            $auctionItem = $auctionRepo->GetItemDetails($fullPath);
 
-           echo "  <div class='row-fluid'>";
-           echo "     <div class='span2'><img src=\"{$fullPath}\" width='80%' height='80%' alt='auction item image'/></div>";
-           echo "     <div class='span8'>";
-           echo "       <div><p><h3>DESCRIPTION</h3></p><p>{$auctionItem->Description}</p></div>";
-           echo "       <div><p><h3>Price:</h3></p><p>{$auctionItem->Price}</p></div>";
-           echo "       <div><p><h3>Shipping:</h3></p><p>{$auctionItem->Shipping}</p></div>";
+           echo "  <div class='row'>";
+           echo "     <div class='four columns'><img src=\"{$fullPath}\" width='80%' height='80%' alt='auction item image'/></div>";
+           echo "     <div class='eight columns'>";
+           echo "         <p><h3>DESCRIPTION</h3></p><p>{$auctionItem->Description}</p>";
+           echo "         <p><h3>Price:</h3></p><p>{$auctionItem->Price}</p>";
+           echo "         <p><h3>Shipping:</h3></p><p>{$auctionItem->Shipping}</p>";
            echo "     </div>";
            echo "  </div>";
        }
