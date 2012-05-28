@@ -27,6 +27,9 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link rel="icon"
+          type="image/ico"
+          href="favicon.ico" />
 </head>
 <body>
 

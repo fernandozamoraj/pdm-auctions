@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>PDM Auctions Administration Page</title>
-    <link type="text/css" rel="stylesheet" href="../twitterbs/css/bootstrap.css"/>
-    <link type="text/css" rel="stylesheet" href="../twitterbs/css/bootstrap-responsive.css"/>
-</head>
-<body>
 <?php
 
 //got code from this site for zipping http://www.internoetics.com/2011/05/17/unzip-a-file-with-php/
@@ -36,7 +28,7 @@ else
     {
         move_uploaded_file($_FILES["zipfile"]["tmp_name"],
             "../Auctions/zipped/" . $_FILES["zipfile"]["name"]);
-        echo "Stored in: " . "../Auctions/zipped/" . $_FILES["zipfile"]["name"];
+        echo "\r\nStored in: " . "../Auctions/zipped/" . $_FILES["zipfile"]["name"];
     }
 
     $fileName = $_FILES["zipfile"]["name"];
