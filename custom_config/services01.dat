@@ -1,0 +1,6 @@
+{
+    "services":[
+        {"header":"My First Service","description":"Description of first service","image":""},
+        {"header":"Second Service","description":"Description of second service","image":""},
+        {"header":"Service Name","description":"Description of third service","image":""}]
+}
