@@ -11,17 +11,9 @@ $aboutUs = new AboutUs();
 <div class='container'>
     <h1><?php $aboutUs->Header ?></h1>
     <div class="row">
-        <div class="twelve columns">
-            <a href="#" class="button" data-reveal-id='myModal'>Contact Us</a>
+        <div class="span12">
+            <h3>Contact Us</h3>
         </div>
-    </div>
-
-    <div id="myModalHolder" class="reveal-modal">
-        <h2>Awesome. I have it.</h2>
-
-        <p class="lead">Your couch.  I it's mine.</p>
-        <p>Im a cool paragraph that lives inside of an even cooler modal. Wins</p>
-        <a class="close-reveal-modal">&#215;</a>
     </div>
 
     <div id="myModal" class="reveal-modal">
@@ -40,25 +32,24 @@ $aboutUs = new AboutUs();
         </div>
 
         <p class="lead">We thank you for your feedback</p>
-        <a class="close-reveal-modal">&#215;</a>
     </div>
 
     <div class='row'>
-        <div class='three columns'>
+        <div class='span3'>
             <h3>Address</h3>
             <p><?php echo $aboutUs->Street; ?></p>
             <p><?php echo $aboutUs->City . ", " . $aboutUs->State; ?></p>
             <p><?php echo $aboutUs->Zipcode ?></p>
         </div>
-        <div class='three columns'>
+        <div class='span3'>
             <h3>Email</h3>
             <p><?php echo $aboutUs->EmailBusiness; ?></p>
         </div>
-        <div class='three columns'>
+        <div class='span3'>
             <h3>Office Phone</h3>
             <p><?php echo $aboutUs->OfficePhone; ?></p>
         </div>
-        <div class='three columns'>
+        <div class='span3'>
             <h3>Cell Phone</h3>
             <p><?php echo $aboutUs->CellPhone; ?></p>
         </div>

@@ -11,12 +11,8 @@ $services = new Services();
 
 echo "\r\n<div class='container'>";
 echo "\r\n   <div class='row'>";
-echo "\r\n       <div class='four columns'>";
-echo "\r\n       </div>";
-echo "\r\n       <div class='four columns'>";
+echo "\r\n       <div class='span4 offset-by-four'>";
 echo "\r\n           <h1>Services</h1>";
-echo "\r\n       </div>";
-echo "\r\n       <div class='four columns'>";
 echo "\r\n       </div>";
 echo "\r\n   </div>";
 echo "\r\n   <div class='row'>";
@@ -25,7 +21,7 @@ $count = 1;
 
 foreach ($services->Services as $service) {
 
-    echo "\r\n          <div class='four columns'>";
+    echo "\r\n          <div class='span4'>";
     echo "\r\n             <div class='panel'>";
     if($service->image != "")
         echo "\r\n                 <img src='./custom_config/images/{$service->image}' alt='{$service->image}'/>";

@@ -11,21 +11,17 @@ $aboutUs = new AboutUs();
 
 echo "\r\n<div class='container'>";
 echo "\r\n   <div class='row'>";
-echo "\r\n       <div class='two columns'></div>";
-echo "\r\n       <div class='eight columns'>";
+echo "\r\n       <div class='span8'>";
 echo "\r\n            <h3>{$aboutUs->Header}</h3>";
 echo "\r\n       </div>";
-echo "\r\n       <div class='two columns'></div>";
 echo "\r\n   </div>";
 
 
 foreach ($aboutUs->Paragraphs as $paragraph) {
         echo "\r\n    <div class='row'>";
-        echo "\r\n         <div class='two columns'></div>";
-        echo "\r\n         <div class='eight columns'>";
+        echo "\r\n         <div class='span8'>";
         echo "\r\n                    </br><p>{$paragraph}</p>";
         echo "\r\n         </div>";
-        echo "\r\n         <div class='two columns'></div>";
         echo "\r\n    </div>";
         echo "\r\n";
     }
