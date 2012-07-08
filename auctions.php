@@ -11,7 +11,7 @@ $folders = $folderBrowser->GetFolders("./Auctions");
 
 echo "\r\n<div class='container'>";
 echo "\r\n   <div class='row'>";
-echo "\r\n     <div class='span12'>";
+echo "\r\n     <div class='twelve columns'>";
 if(count($folders) > 2)
     echo "\r\n        <h2>Active Auctions</h2>";
 else

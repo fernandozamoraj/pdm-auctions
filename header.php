@@ -4,10 +4,10 @@
     <?php global $pageTitle; ?>
     <title>PDM Auctions</title>
     <!-- Included CSS Files -->
-    <link rel="stylesheet" href="./foundation3/stylesheets/app.css">
-    <link rel="stylesheet" href="./foundation3/stylesheets/foundation.css">
-    <link rel="stylesheet" href="./foundation3/stylesheets/foundation.css"   >
-    <link rel="stylesheet" href="./css/site.css">
+    <link rel="stylesheet" href="./foundation3/stylesheets/app.css"/>
+    <link rel="stylesheet" href="./foundation3/stylesheets/foundation.css"/>
+    <link rel="stylesheet" href="./foundation3/stylesheets/foundation.css"/>
+    <link rel="stylesheet" href="./css/site.css"/>
     <style type="text/css">
         
         @font-face{
