@@ -1,0 +1,22 @@
+body {
+  font-family: "verdana";
+}
+
+td{
+    padding: 10px;
+    border: solid #000 1px;
+    width: 80px;
+    max-width: 80px;
+}
+
+.calendar td{
+    font-size: xx-small;
+}
+
+li{
+    list-style-type: none;
+    font-size: xx-small;
+}
+
+
+

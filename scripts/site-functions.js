@@ -1,16 +1,12 @@
-﻿function beefyRollover(elementName){
-	$("#" + elementName).mouseover(function(){
-		$(this).toggleClass(elementName + "-hover");
-	}).mouseout(function(){
-		$(this).toggleClass(elementName + "-hover");
-	});
+var PdmApp ={};
+            
+PdmApp.setActiveLink = function(linkId){
+                 $('#homelink').removeClass("active");
+                 $('#calendarlink').removeClass("active");
+                 $('#contactuslink').removeClass("active");
+                 $('#serviceslink').removeClass("active");
+                 $('#auctionslink').removeClass("active");
+                 $('#aboutuslink').removeClass("active");
+                 
+                 $(linkId).addClass("active");
 }
-
-function setupSocialMediaIcon(elementName, url){
-	beefyRollover(elementName);
-	
-	$("#" + elementName).click(function(){
-		window.location = url;
-	});
-}				
-

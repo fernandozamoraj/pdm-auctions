@@ -21,7 +21,7 @@ $count = 1;
 
 foreach ($services->Services as $service) {
 
-    echo "\r\n          <div class='span4'>";
+    echo "\r\n          <div class='four columns'>";
     echo "\r\n             <div class='panel'>";
     if($service->image != "")
         echo "\r\n                 <img src='./custom_config/images/{$service->image}' alt='{$service->image}'/>";
@@ -45,3 +45,14 @@ echo "\r\n</div>\r\n";
 
 include_once("footer.php");
 ?>
+
+
+<script type="text/javascript">
+            
+            $(window).load(function() {
+                PdmApp.setActiveLink("#serviceslink");
+            });
+</script>
+
+</body>
+</html>

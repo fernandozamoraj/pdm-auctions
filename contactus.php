@@ -8,10 +8,12 @@ include_once("./app_code/AboutUs.php");
 $aboutUs = new AboutUs();
 ?>
 
-<div class='container'>
-    <h1><?php $aboutUs->Header ?></h1>
+
+    <div class="row"> 
+       <h1><?php $aboutUs->Header ?></h1>
+    </div>   
     <div class="row">
-        <div class="span12">
+        <div class="twelve columns">
             <h3>Contact Us</h3>
         </div>
     </div>
@@ -35,29 +37,37 @@ $aboutUs = new AboutUs();
     </div>
 
     <div class='row'>
-        <div class='span3'>
+        <div class='three columns'>
             <h3>Address</h3>
             <p><?php echo $aboutUs->Street; ?></p>
             <p><?php echo $aboutUs->City . ", " . $aboutUs->State; ?></p>
             <p><?php echo $aboutUs->Zipcode ?></p>
         </div>
-        <div class='span3'>
+        <div class='three columns'>
             <h3>Email</h3>
             <p><?php echo $aboutUs->EmailBusiness; ?></p>
         </div>
-        <div class='span3'>
+        <div class='three columns'>
             <h3>Office Phone</h3>
             <p><?php echo $aboutUs->OfficePhone; ?></p>
         </div>
-        <div class='span3'>
+        <div class='three columns'>
             <h3>Cell Phone</h3>
             <p><?php echo $aboutUs->CellPhone; ?></p>
         </div>
-
-    </div>
-</div>
+   </div>
 
 <?php
     include_once("footer.php");
 ?>
 
+
+<script type="text/javascript">
+            
+            $(window).load(function() {
+                PdmApp.setActiveLink("#contactuslink");
+            });
+</script>
+
+</body>
+</html>

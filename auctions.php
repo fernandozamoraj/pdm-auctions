@@ -28,7 +28,7 @@ foreach($folders as $folder)
         continue;
 
     echo "\r\n   <div class='row'>";
-    echo "\r\n      <div class='span4 offset-by-four'>";
+    echo "\r\n      <div class='four columns'>";
     echo "\r\n         <div class='panel'>";
     echo "\r\n            <h3>" . strtoupper( $auctionId ) . "</h3>";
     echo "\r\n            <p>This is a simple explanation of this auction. There could be longer descriptions in relation to this description. This is just a short example of what is possible.</p>";
@@ -36,7 +36,7 @@ foreach($folders as $folder)
     echo "\r\n            <a class='btn btn-large' href='auctiondetails.php?auction={$auctionId}'>View Details for {$auctionId}</a>";
     echo "\r\n          </div>";
     echo "\r\n      </div>";
-    echo "\r\n      <div class='span4'></div>";
+    echo "\r\n      <div class='four columns'></div>";
     echo "\r\n    </div>";
 
     $auctionCount++;
@@ -46,3 +46,14 @@ echo "\r\n</div>";
 
 include_once("footer.php");
 ?>
+
+
+<script type="text/javascript">
+            
+            $(window).load(function() {
+                PdmApp.setActiveLink("#auctionslink");
+            });
+</script>
+
+</body>
+</html>

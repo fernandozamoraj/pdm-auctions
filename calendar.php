@@ -13,3 +13,14 @@ include_once("header.php");
 <?php
     include_once("footer.php");
 ?>
+
+
+<script type="text/javascript">
+            
+            $(window).load(function() {
+                PdmApp.setActiveLink("#calendarlink");
+            });
+</script>
+
+</body>
+</html>
